@@ -1,0 +1,111 @@
+      
+  
+    <div class="modal fade  text-center" id="taskModalid">
+            <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">My Tasks</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="row"  >
+                              
+                              <div class="col-md-12">
+                                  <div class="panel panel-default">
+                                      <div class="panel-body">
+                                       <form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Task Title:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Task Description:</label>
+    
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+   
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Team:</label>
+    
+      <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Team 1</a></li>
+    <li><a href="#">Team 2</a></li>
+    <li><a href="#">Team 3</a></li>
+  </ul>
+</div>
+   
+  </div>
+  <div class="form-group">
+                <label class="control-label" for="date">Drop-In Date/Time</label>
+        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+      
+            </div>
+			
+			  <div class="form-group">
+                <label class="control-label" for="date">Dead Line</label>
+        <input class="form-control" id="endDate" name="endDate" placeholder="MM/DD/YYY" type="text"/>
+      
+            </div>
+			
+			<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Priority
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Low</a>
+    <a class="dropdown-item" href="#">Medium</a>
+    <a class="dropdown-item" href="#">High</a>
+	<a class="dropdown-item" href="#">Showstopper</a>
+  </div>
+</div>
+<select class="mdb-select" multiple searchable="Search here..">
+    <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">User1</option>
+    <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">User2</option>
+    <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">User3</option>
+</select>
+<button class="btn-save btn btn-primary btn-sm">Save</button>
+
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+                                        
+                                      </div>
+                                    </div>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+	$('.mdb-select').material_select();
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+	  var endDate = $('input[name="endDate"]'); //our date input has the name "date"
+      var container=$('.panel-body form').length>0 ? $('.panel-body form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+	  endDate.datepicker(options);
+	  
+    })
+</script>
