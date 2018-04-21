@@ -1,144 +1,172 @@
-      
-  
-    <div class="modal fade  text-center" id="taskModalid">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel">My Tasks</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                          <div class="row"  >
-                              
-                              <div class="col-md-12">
-                                  <div class="panel panel-default">
-                                      <div class="panel-body">
-                                       <form class="form-horizontal" action="/action_page.php">
-  <div class="form-group">
-    
-      <label class="control-label col-sm-2" for="email">Task Title:</label> 
-     <input class="col-md-10" type="email" class="form-control" id="email" placeholder="Enter email">
-   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Task Description:</label>
-    <textarea class="col-md-10" class="form-control"  id="comment"></textarea>
-   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Team:</label>
-    
-      <div class="btn-group">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Team 1</a></li>
-    <li><a href="#">Team 2</a></li>
-    <li><a href="#">Team 3</a></li>
-  </ul>
-</div>
-   
-  </div>
-  <div class="form-group">
-                <label class="control-label col-sm-2" for="date">Drop-In Date/Time:</label>
-         
-                <div class="input-group date" id="example">
-
-            <input    class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" class="form-control" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-  </div>
-           
-			
-			  <div class="form-group">
-                <label class="control-label col-sm-2" for="date">Dead Line:</label>
-                <div class="input-group date" id="example">
-
-        <input   class="form-control"  id="endDate" name="endDate" placeholder="MM/DD/YYY" type="text"/>
-        <span class="input-group-addon">
-          <span class="glyphicon glyphicon-calendar"></span>
-        </span>
-            </div>
-			  </div>
-            <div class="form-group">
-			<div class="btn-group">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Priority
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li class="dropdown-item" href="#">Low</li>
-    <li class="dropdown-item" href="#">Medium</li>
-    <li class="dropdown-item" href="#">High</li>
-	<li class="dropdown-item" href="#">Showstopper</li>
-  </ul>
-</div></div>
-<div class="form-group">
-  
-  <div class="btn-group">
-    <button type="button" id="dropdownbtn" class="btn btn-secondary  dropdown-toggle" data-toggle="dropdown">Click here <span class="caret"></span></button>
-<ul class="dropdown-menu scrollable-menu" id="dropdownmenu">
-    
-<li><a href="#" class="large" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50" /></a></li>
-<li><a href="#" class="large" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50" /></a></li>
-<li><a href="#" class="large" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
-<li><a href="#" class="large" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
-<li><a href="#" class="large" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
-<li><a href="#" class="large" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
-</ul>
-
-</div>
-</div>
-<div class="form-group"> 
-    <div class="col-sm-offset-2 col-sm-10">
-        <select class="selectpicker">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Relish</option>
-          </select>
-
-
-        <select class="selectpicker" multiple data-actions-box="true">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Relish</option>
-          </select>
-           </div>
-  </div>
-
-  <div class="form-group"> 
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Submit</button>
-    </div>
-  </div>
-</form>
-                                        
-                                      </div>
-                                    </div>
-                              </div>
+<div class="modal fade  text-center" id="taskModalid">
+	<div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="exampleModalLabel">My Tasks</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row"  >
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form class="form-horizontal" action="/action_page.php">
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="title">Task Title:</label> 
+										<input class="col-md-10" type="text" class="form-control" id="title" placeholder="Enter Title">
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="pwd">Task Description:</label>
+										<textarea class="col-md-10" class="form-control"  id="comment"></textarea>
+									</div>
+									<div class="form-group"> 
+										<div class="col-sm-offset-2 col-sm-10">
+											<label class="control-label col-sm-2" for="pwd">Task Type:</label>
+											<select id="selectTaskType" multiple="multiple">
+												<option value="Team1">Template Design</option>
+												<option value="Team2">Productions</option>
+												<option value="Team3">Formatting</option>
+												<option value="Team4">Visual Enhancement</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group"> 
+										<div class="col-sm-offset-2 col-sm-10">
+											<label class="control-label col-sm-2" for="pwd">Team:</label>
+											<select id="selectTeam" multiple="multiple">
+												<option value="Team1">Team1</option>
+												<option value="Team2">Team2</option>
+												<option value="Team3">Team3</option>
+												<option value="Team4">Team4</option>
+												<option value="Team5">Team5</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="date">Drop-In Date/Time:</label>
+										<div class="input-group date" id="example">
+											<input  class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" class="form-control" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2" for="date">Dead Line:</label>
+										<div class="input-group date" id="example">
+											<input class="form-control"  id="endDate" name="endDate" placeholder="MM/DD/YYY" type="text"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="btn-group">
+											<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Priority
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<li class="dropdown-item" href="#">Low</li>
+												<li class="dropdown-item" href="#">Medium</li>
+												<li class="dropdown-item" href="#">High</li>
+												<li class="dropdown-item" href="#">Showstopper</li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="btn-group">
+											<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Owner
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<li class="dropdown-item" href="#">User1</li>
+												<li class="dropdown-item" href="#">User2</li>
+												<li class="dropdown-item" href="#">User3</li>
+												<li class="dropdown-item" href="#">User4</li>
+												<li class="dropdown-item" href="#">User5</li>
+												<li class="dropdown-item" href="#">User6</li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="btn-group">
+											<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Task Status
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<li class="dropdown-item" href="#">Booking</li>
+												<li class="dropdown-item" href="#">Not Started</li>
+												<li class="dropdown-item" href="#">In-Progress</li>
+												<li class="dropdown-item" href="#">With Proof</li>
+												<li class="dropdown-item" href="#">Completed</li>
+												<li class="dropdown-item" href="#">Closed</li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="btn-group">
+											<button type="button" id="dropdownbtn" class="btn btn-secondary  dropdown-toggle" data-toggle="dropdown">Click here <span class="caret"></span></button>
+											<ul class="dropdown-menu scrollable-menu" id="dropdownmenu">
+												<li><a href="#" class="large" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50" /></a></li>
+												<li><a href="#" class="large" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50" /></a></li>
+												<li><a href="#" class="large" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
+												<li><a href="#" class="large" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
+												<li><a href="#" class="large" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
+												<li><a href="#" class="large" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6&nbsp;<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" height="50" width="50"/></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-group"> 
+										<div class="col-sm-offset-2 col-sm-10">
+											<label class="control-label col-sm-2" for="pwd">Assignee:</label>
+											<select id="selectUser" multiple="multiple">
+												<option value="User1">User1</option>
+												<option value="User2">User2</option>
+												<option value="User3">User3</option>
+												<option value="User4">User4</option>
+												<option value="User5">User5</option>
+											</select>
+										</div>
+									</div>
+								</form> 
                             </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
-                    </div>
-                  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+		</div>
+    </div>
 </div>
 
 <script>
   
   // date and time picker
     $(document).ready(function(){
-      $('#date').datetimepicker();
+    $('#date').datetimepicker();
+	$('#endDate').datetimepicker();
+	$('#selectTeam').multiselect({
+            nonSelectedText: 'Select Team!',
+            buttonWidth: 250,
+            enableFiltering: true
+        });
+	$('#selectUser').multiselect({
+            nonSelectedText: 'Select User!',
+            buttonWidth: 250,
+            enableFiltering: true
+        });
+	$('#selectTaskType').multiselect({
+            nonSelectedText: 'Select Task Type!',
+            buttonWidth: 250,
+            enableFiltering: true
+        });
     })
-    $(document).ready(function(){
-      $('#endDate').datetimepicker({
-        format: 'DD.MM.YYYY'
-    });
-    })
-//dropdown button
+    
 
 $('#dropdownmenu a').on('click', function(){   
    
@@ -146,6 +174,6 @@ $('#dropdownmenu a').on('click', function(){
 })
 
    $(document).ready(function() {
-   $('.selectpicker').selectpicker();
+   
 }); 
 </script>
