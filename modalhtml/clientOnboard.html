@@ -29,34 +29,33 @@
         <div class="row setup-content" id="step-1">
             <div class="col-xs-6 col-md-offset-3">
               <div class="col-md-12">
-                <h3> Step 1</h3>
+                <h3>Select your option</h3>
                 <div class="radio">
-                    <label><input type="radio" name="radio" id="radio" value="clientOnboard">Client Onboarding</label>
+                    <label><input type="radio" name="radio" id="radio" value="clientOnboard">Organization Onboarding</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="radio" id="radio" value="Buonboard">Bu Onboarding</label>
+                    <label><input type="radio" name="radio" id="radio" value="Buonboard">BU Onboarding</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="radio" id="radio" value="Orgonboard">Org Onboarding</label>
+                    <label><input type="radio" name="radio" id="radio" value="Orgonboard">Project Onboarding</label>
                   </div>
                   <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" id="radiobutton">Next</button>
           
                  </div>
             </div>
-          </div>
+        </div>
        <div class="row setup-content" id="step-2">
          <div class="col-xs-6 col-md-offset-3">
            <div class="col-md-12">
-             <h3> Step 2</h3>
              <div id="clientOnboard">
-                 <h2>Client/Org onboarding</h2>
+                 <h2>Client/Org Onboarding</h2>
                  <div class="form-group">
-                        <label class="control-label">Client Name</label>
+                        <label class="control-label">Client/Org Name</label>
                         <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Client Name">
                       </div>
                       <div class="form-group">
                             <label class="control-label">Point Of Contact</label>
-                            <textarea required="required" class="form-control" placeholder="Enter your address"></textarea>
+                            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Point Of Contact">
                           </div>
                           <div class="form-group">
                                 <label class="control-label " for="date">Date of contact:</label>
@@ -376,14 +375,34 @@
                                                 <label class="control-label">Additional Comments</label>
                                                 <textarea required="required" class="form-control" placeholder="Enter your comments"></textarea>
                                               </div>
-                                              <div class="form-group">
-                                                    <label for="exampleFormControlFile1">Attachment</label>
+                                              <!--<div class="form-group">
+                                                    <label for="exampleFormControlFile1">SOW</label>
                                                     <input type="file" class="form-control-file" id="Attachment1">
-                                      </div>
+                                      </div>-->
+									  <div class="control-group" id="fields">
+          <label class="control-label" for="field1">
+            SOW/Supporting Docs
+          </label>
+          <div class="controls">
+           
+              <div class="entry input-group col-xs-3">
+                
+             
+                <input class="btn btn-primary" name="fields[]" type="file">
+                <span class="input-group-btn">
+              <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                </span>
+              </div>
+           
+          </div>
+          
+        </div>
 
                  </div>
-             <div id="Buonboard">Bu onboarding</div>
-             <div id="Orgonboard">org onboarding</div>
+             <!--<div id="Buonboard">Bu onboarding</div>
+             <div id="Orgonboard">org onboarding</div>-->
     
            
              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
@@ -436,4 +455,28 @@
     </div>
     </div>
 
-    
+    <script>
+	$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+      $(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+	</script>
